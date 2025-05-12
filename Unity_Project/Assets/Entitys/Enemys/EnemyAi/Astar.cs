@@ -324,10 +324,6 @@ public class Astar : MonoBehaviour
                             Debug.DrawRay(neighbour.worldPosition, Vector3.up * 0.5f, Color.red, 1f);
                             continue;
                         }
-
-                        //I don't even bother calculating the distance 
-                        //Since i already know going left-right is the same from the current node
-                        //And diagonal saves distance.
                         // int moveCost = (x != 0 && y != 0) ? 14 : 10;
 
                         int moveCost = GetOctileDistance(n, neighbour);
