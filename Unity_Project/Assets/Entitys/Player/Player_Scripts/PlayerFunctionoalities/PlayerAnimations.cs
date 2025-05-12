@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class PlayerAnimations : MonoBehaviour
 {
+    public GameObject gameOver;
 
     public Animator anim;
 
@@ -74,6 +75,7 @@ public class PlayerAnimations : MonoBehaviour
     {
         shouldStopAnimating = true;
         StopAnimating();
+        gameOver.SetActive(true);
     }
 
     void ChangeAnimation()

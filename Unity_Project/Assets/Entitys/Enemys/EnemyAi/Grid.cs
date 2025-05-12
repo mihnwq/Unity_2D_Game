@@ -198,7 +198,7 @@ public class PFGrid : MonoBehaviour
 
             foreach(Node node in grid)
             {
-               // Gizmos.color = node.isSolid ? Color.red : Color.green;
+                Gizmos.color = node.isSolid ? Color.red : Color.green;
 
              /*   if(node == playerNode)
                 {
@@ -206,7 +206,7 @@ public class PFGrid : MonoBehaviour
                     Gizmos.DrawSphere(new Vector3(node.worldPosition.x, node.worldPosition.y, 0), nodeRadius);
                 }*/
 
-                if(node.gridPosition.x >= startGridX && node.gridPosition.y >= startGridY &&
+          /*      if(node.gridPosition.x >= startGridX && node.gridPosition.y >= startGridY &&
                     node.gridPosition.x <= endGridX && node.gridPosition.y <= endGridY)
                 {
                    // Gizmos.color = Color.magenta;
@@ -215,11 +215,11 @@ public class PFGrid : MonoBehaviour
 
                     Gizmos.DrawSphere(new Vector3(node.worldPosition.x, node.worldPosition.y, 0), nodeRadius);
                     
-                }
+                }*/
                
               
 
-                if (pf.lastShorthestPath.Contains(node))
+              /*  if (pf.lastShorthestPath.Contains(node))
                 {
                     Gizmos.color = Color.black;
                     Gizmos.DrawSphere(new Vector3(node.worldPosition.x, node.worldPosition.y, 0), nodeRadius);
@@ -241,7 +241,7 @@ public class PFGrid : MonoBehaviour
                                 {
                                     Gizmos.color = Color.white;
                                     Gizmos.DrawSphere(new Vector3(node.worldPosition.x, node.worldPosition.y, 0), nodeRadius);
-                                }
+                                }*/
                 /*
                            if(node.isSolid == true)
                            {
@@ -252,9 +252,9 @@ public class PFGrid : MonoBehaviour
 
 
 
-                //   Gizmos.DrawSphere(new Vector3(node.worldPosition.x, node.worldPosition.y, 0), nodeRadius);
+                   Gizmos.DrawSphere(new Vector3(node.worldPosition.x, node.worldPosition.y, 0), nodeRadius);
 
-                //  Gizmos.DrawCube(node.worldPosition, Vector2.one * (nodeDiameter - .1f));
+                  Gizmos.DrawCube(node.worldPosition, Vector2.one * (nodeDiameter - .1f));
             }
         }
     }

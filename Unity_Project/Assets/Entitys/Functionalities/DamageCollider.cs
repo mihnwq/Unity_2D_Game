@@ -41,7 +41,13 @@ public class DamageCollider : MonoBehaviour
     {
         if(other.gameObject.tag == ID)
         {
+          /*  GameObject entity = other.gameObject;
 
+            Entity currentEntity = entity.GetComponent<Entity>();
+
+            if (!currentEntity.hasDied)
+                currentEntity.OnTakeDamage(damage);*/
+            
             damageTime = 0f;
         }
     }

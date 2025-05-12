@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class Player : Entity
 {
+   
+
     public List<Item> iiii = new List<Item>();
 
     public bool alive = true;
@@ -79,6 +81,8 @@ public class Player : Entity
         isAttacking = false;
 
         hp = new Health(2, playerHealth, heart);
+
+        hp.TakeDamage();
     }
 
     //The update it's being called constantly every frame.
@@ -94,31 +98,10 @@ public class Player : Entity
             if (Input.GetKeyDown(KeyCode.I))
                 InteractInventory();
 
-            if (Input.GetKeyDown(KeyCode.Z))
-                inv.Add(item1);
-
-            if (Input.GetKeyDown(KeyCode.X))
-                inv.Add(item2);
-
-            if (Input.GetKeyDown(KeyCode.C))
-                inv.Add(item3);
-
-            if (Input.GetKeyDown(KeyCode.B))
-                inv.Remove(item1);
-
-            if (Input.GetKeyDown(KeyCode.N))
-                inv.Remove(item2);
-
-            if (Input.GetKeyDown(KeyCode.M))
-                inv.Remove(item3);
-
-            l = inv.currentChangingIndex;
-
-            
             if (Input.GetKeyDown(KeyCode.L))
                 hp.TakeDamage();
 
-            iiii = InventoryList.itemList;
+           
         }
 
         PlayerStates.GetLivelihood(alive);

@@ -324,6 +324,11 @@ public class Astar : MonoBehaviour
                             Debug.DrawRay(neighbour.worldPosition, Vector3.up * 0.5f, Color.red, 1f);
                             continue;
                         }
+<<<<<<< Updated upstream
+=======
+
+                       
+>>>>>>> Stashed changes
                         // int moveCost = (x != 0 && y != 0) ? 14 : 10;
 
                         int moveCost = GetOctileDistance(n, neighbour);
