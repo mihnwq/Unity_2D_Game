@@ -123,6 +123,7 @@ public class Astar : MonoBehaviour
         shorthestPath = new List<Node>();
 
         startNode = grid.NodeFromWorldPoint(start.position);
+        startNode.gCost = 0;
 
         goalReached = false;
 
